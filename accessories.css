@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* css of the navigation bar */
+
+.header
+{
+    width:100%;
+   
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+.logo{
+    width:175px;
+     height:120px;
+     cursor: pointer;
+     background-color:transparent;
+     object-fit: contain;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%; /*rj3la */
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links li a{
+    text-decoration: none;
+    color:white;
+    font-size: 25px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+ .nav-links .active, .nav-links a:hover{
+    color:black;
+    background: white;
+    padding: 5px;
+}
+#nohov .active, #nohov:hover{
+    background:none;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+@media screen and (max-width:1024px){
+    .nav-links  {
+    width: 60%;
+    }
+}
+@media screen and (max-width:900px){
+body{
+    overflow-x: hidden;
+}
+.nav-links{
+    position: absolute;
+    right:0px;
+    height: 92vh;
+    top: 10vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    transform: translateX(100%);/*move to left*/
+    transition: transform 0.5s ease-in;
+}
+ .nav-links li{
+    opacity: 0;
+ }
+ .burger{
+    display: block;
+    cursor: pointer;
+ }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    form{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+/* css for the car accesories divisions */
+
+.main-accessories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+.inner-acc {
+    flex: 1 1 50rem;
+}
+
+.inner-acc:nth-child(1) {
+    background: #1c1c1c;
+}
+
+.inner-acc:nth-child(2) {
+    background: black;
+}
+
+.inner-acc:nth-child(3) {
+    background: rgba(0, 0, 0, 0.582);
+}
+
+
+
+.box h2 {
+    color: white;
+    font-size: 31px;
+    padding-left: 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.box img {
+    width: 35%;
+}
+
+.feature-products {
+    background: #282828;
+}
+
+.feature-products h1 {
+    padding-top: 100px;
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 15px;
+}
+
+.inner-featurebox {
+    background: #363636;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+}
+#tool{
+  padding-top: 50px;
+}
+#tool1{
+  padding-top: 57px;
+}
+#tool2{
+  padding-top:40px;
+}
+.img{
+  padding-top: 20px;
+}
+.inner-featurebox h2 {
+    color: #000000;
+    padding-top: 20px;
+}
+
+.inner-featurebox h3 {
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+
+
+}
+
+.inner-featurebox:nth-child(1) h2 {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+
+.inner-featurebox:nth-child(2) h2 {
+
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.inner-featurebox:nth-child(3) h2 {
+
+    font-size: 1.5rem;
+
+}
+
+.inner-featurebox:nth-child(4) h2 {
+
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+
+.inner-featurebox img {
+    width: 80%;
+}
+
+
+/* making the footer css */
+
+
+
+a,
+    a:visited,
+    a:active {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+    
+    a:hover {
+      color:  darkblue;
+    }
+    footer {
+      background-color: black;
+      color: #dfdfdf;
+      padding-bottom: 3px;
+    }
+    
+    footer h3 {
+      color: white;
+    }
+    
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 50px;
+      justify-items: center;
+      max-width: 900px;
+      margin: 0 auto 80px auto;
+    }
+    
+    .footer-col {
+      width: max-content;
+      padding-top: 30px;
+    }
+    
+    .footer-col > * {
+      display: block;
+      width: max-content;
+    }
+    
+    .footer-col > h3 {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+    
+    .footer-col a {
+      padding: 5px 0;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    
+    .footer-middle {
+      width: 100%;
+      text-align: center;
+    } 
+    .footer-middle h3{
+      font-size: 25px;
+      padding-bottom: 40px;
+    }
+    form div{
+      padding-bottom: 10px;
+    }
+    .footer-middle label {
+      display: block;
+      margin-bottom: 10px;
+      overflow-wrap: break-word;
+    }
+    
+    input {
+      padding: 10px;
+      border-radius: 3px;
+    }
+    
+    input[type="submit"] {
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    input[type="submit"]:hover {
+      color: white;
+      background-color: darkblue;
+    }
+    
+    .footer-bottom {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+    
+    a.social {
+      display: block;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    
+    a.social:hover {
+      background-color: darkblue;
+      color: white;
+    }
+    
+    a.social:not(:last-child) {
+      margin-right: 10px;
+    }
+    
+    @media screen and (max-width: 900px) {
+      .footer-top {
+        justify-items: start;
+      }
+    }
+    
+    @media screen and (max-width: 660px) {
+      footer {
+        padding: 30px;
+      }
+    
+      .footer-middle {
+        text-align: left;
+      }
+    }
